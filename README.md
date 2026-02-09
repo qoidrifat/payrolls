@@ -66,8 +66,8 @@ Ikuti langkah-langkah ini untuk menjalankan proyek di lingkungan lokal Anda.
 
 ### 2. Clone Repositori
 ```bash
-git clone https://link-ke-repositori-anda.git
-cd nama-folder-proyek
+git clone https://github.com/qoidrifat/payrolls.git
+cd payrolls
 ```
 
 ### 3. Instalasi Dependensi
