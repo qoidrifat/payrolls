@@ -1,66 +1,127 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Payroll Management System
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
 </p>
 
-## About Laravel
+<p align="center">
+  <strong>Sebuah sistem manajemen penggajian modern, aman, dan efisien yang dibangun di atas Laravel dan Filament.</strong>
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p align="center">
+  <a href="#"><img src="https://img.shields.io/badge/PHP-8.2-777BB4.svg?style=flat-square" alt="PHP 8.2"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Laravel-10.x-FF2D20.svg?style=flat-square" alt="Laravel 10.x"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Filament-3.x-F59E0B.svg?style=flat-square" alt="Filament 3.x"></a>
+  <a href="#"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License MIT"></a>
+</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**Payroll Management System** adalah aplikasi web canggih yang dirancang untuk mengotomatiskan dan menyederhanakan proses penggajian yang kompleks. Dengan arsitektur yang kuat dan antarmuka pengguna yang intuitif, sistem ini menyediakan dua portal berbeda—satu untuk **Administrator** dengan kontrol penuh dan satu lagi untuk **Karyawan** dengan akses mandiri (self-service).
 
-## Learning Laravel
+## ✨ Fitur Utama
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Sistem ini dirancang dengan serangkaian fitur yang kuat untuk memenuhi kebutuhan manajemen SDM dan keuangan modern.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+-   **🖥️ Portal Ganda (Dual Portal)**
+    -   **Portal Admin:** Antarmuka komprehensif untuk mengelola seluruh aspek sistem, mulai dari data master hingga laporan akhir.
+    -   **Portal Karyawan:** Antarmuka yang ramah pengguna bagi karyawan untuk mengakses informasi pribadi mereka, seperti slip gaji dan riwayat kehadiran.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+-   **🗃️ Manajemen Data Terpusat**
+    -   Mengelola data karyawan, jabatan, departemen, dan komponen gaji secara terstruktur dan mudah diakses.
 
-## Laravel Sponsors
+-   **⚙️ Perhitungan Gaji Otomatis**
+    -   Mesin kalkulasi canggih yang secara otomatis menghitung gaji berdasarkan data kehadiran, jabatan, tunjangan, potongan, dan variabel lainnya.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+-   **📄 Generasi Slip Gaji**
+    -   Membuat slip gaji dalam format PDF secara otomatis untuk setiap karyawan dan menyediakannya melalui portal karyawan untuk akses mandiri.
 
-### Premium Partners
+-   **📊 Laporan Komprehensif**
+    -   Menyediakan berbagai laporan dinamis untuk keperluan administrasi, audit, dan analisis keuangan, yang dapat diekspor dengan mudah.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+-   **🛡️ Keamanan & Kontrol Akses (RBAC)**
+    -   Dibangun dengan mempertimbangkan keamanan, sistem ini menggunakan Role-Based Access Control (RBAC) melalui `Filament Shield` untuk memastikan pengguna hanya dapat mengakses data dan fitur yang sesuai dengan peran mereka.
 
-## Contributing
+-   **🎨 Tema "Secure Gateway" Kustom**
+    -   Antarmuka pengguna yang dirancang khusus dengan tema gelap modern ("glassmorphism") untuk memberikan pengalaman visual yang konsisten dan profesional di seluruh aplikasi.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🛠️ Tumpukan Teknologi (Tech Stack)
 
-## Code of Conduct
+Proyek ini dibangun menggunakan teknologi terbaru dan paling andal di ekosistem PHP.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+-   **Backend:** PHP 8.2, Laravel 10
+-   **Admin Panel & UI:** Filament 3.x, Livewire 3
+-   **Frontend:** Tailwind CSS, Alpine.js, Vite
+-   **Database:** Kompatibel dengan MySQL, PostgreSQL, SQLite
 
-## Security Vulnerabilities
+## 🚀 Panduan Instalasi & Setup
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Ikuti langkah-langkah ini untuk menjalankan proyek di lingkungan lokal Anda.
 
-## License
+### 1. Prasyarat
+-   PHP >= 8.1
+-   Composer
+-   Node.js & NPM
+-   Database (misalnya, MySQL, PostgreSQL)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 2. Clone Repositori
+```bash
+git clone https://link-ke-repositori-anda.git
+cd nama-folder-proyek
+```
+
+### 3. Instalasi Dependensi
+Instal dependensi PHP dan JavaScript.
+```bash
+# Instal dependensi backend
+composer install
+
+# Instal dependensi frontend
+npm install
+```
+
+### 4. Konfigurasi Lingkungan (.env)
+Salin file environment dan buat kunci aplikasi.
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+**Penting:** Buka file `.env` dan konfigurasikan koneksi database Anda (DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD).
+
+### 5. Migrasi & Seeding Database
+Jalankan migrasi untuk membuat skema tabel dan (opsional) seeder untuk mengisi data awal.
+```bash
+php artisan migrate --seed
+```
+
+### 6. Kompilasi Aset Frontend
+Jalankan server pengembangan Vite untuk mengkompilasi CSS dan JS secara real-time.
+```bash
+npm run dev
+```
+**Biarkan terminal ini tetap berjalan** saat Anda mengembangkan aplikasi.
+
+### 7. Jalankan Server Lokal
+Buka terminal baru dan jalankan server pengembangan Laravel.
+```bash
+php artisan serve
+```
+Aplikasi Anda sekarang dapat diakses di **http://127.0.0.1:8000**.
+
+## 🔑 Akses Portal
+
+-   **Halaman Utama (Gateway):**
+    -   URL: `http://127.0.0.1:8000/`
+
+-   **Portal Administrator:**
+    -   URL: `http://127.0.0.1:8000/admin`
+    -   Email: `admin@example.com`
+    -   Password: `password`
+
+-   **Portal Karyawan:**
+    -   URL: `http://127.0.0.1:8000/karyawan`
+    -   *Gunakan data karyawan yang dibuat melalui seeder atau portal admin.*
+
+## 📄 Lisensi
+
+Proyek ini berada di bawah Lisensi MIT. Lihat file [LICENSE](LICENSE.md) untuk detail lebih lanjut.
