@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penggajian Report</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header img {
+            width: 100px;
+            border-radius: 50%;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header h2 {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .footer {
+            text-align: center;
+            border-top: 1px solid #000;
+            padding: 10px 0;
+        }
+        .signature-section {
+            margin-top: 40px;
+        }
+        .signature {
+            text-align: center;
+        }
+        .signature-line {
+            border-top: 1px solid #000;
+            margin: 50px auto 10px auto;
+            width: 75%; /* Adjust line width as needed */
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <div class="header text-center mb-4">
+            <img src="{{ public_path('images/maqna.jpg') }}" alt="Company Logo">
+            <h1>Maqna Tech Lab</h1>
+            <h2>Penggajian Karyawan</h2>
+        </div>
+
+        <div class="info mb-4">
+            <p><strong>Nama Karyawan:</strong> {{ $penggajian->karyawan->nama }}</p>
+            <p><strong>Tanggal Penggajian:</strong> {{ $penggajian->tanggal_penggajian }}</p>
+            <p><strong>Periode Penggajian:</strong> {{ $penggajian->periode_penggajian }}</p>
+        </div>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Jumlah (IDR)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Gaji Pokok</td>
+                    <td>{{ number_format($penggajian->gaji_pokok, 0, ',', '.') }}</td>
+                </tr>
+                <tr>
+                    <td>Tunjangan</td>
+                    <td>{{ number_format($penggajian->tunjangan, 0, ',', '.') }}</td>
+                </tr>
+                <tr>
+                    <td>Upah Lembur</td>
+                    <td>{{ number_format($penggajian->upah_lembur, 0, ',', '.') }}</td>
+                </tr>
+                <tr>
+                    <td>Bonus</td>
+                    <td>{{ number_format($penggajian->bonus, 0, ',', '.') }}</td>
+                </tr>
+                <tr>
+                    <td>Potongan</td>
+                    <td>{{ number_format($penggajian->potongan, 0, ',', '.') }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Gaji Bersih</strong></td>
+                    <td><strong>{{ number_format($penggajian->gaji_bersih, 0, ',', '.') }}</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Signature Section -->
+        <div class="signature-section row text-center">
+            <div class="col-6">
+                <p><strong>Karyawan</strong></p>
+                <div class="signature-line"></div>
+                <p>{{ $penggajian->karyawan->nama }}</p>
+            </div>
+            <div class="col-6">
+                <p><strong>Manager</strong></p>
+                <div class="signature-line"></div>
+                <p>Dr. Eka Hastarita Rachman, S.T., M.Eng</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer mt-4">
+        <p>Terima kasih atas kerja sama Anda.</p>
+        <p>Alamat Perusahaan: Jl. Kelud No 06, Kab. Bangkalan, Jawa Timur, 69116</p>
+        <p>Telepon: 0021044521</p>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
