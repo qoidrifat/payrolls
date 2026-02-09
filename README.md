@@ -124,4 +124,4 @@ Aplikasi Anda sekarang dapat diakses di **http://127.0.0.1:8000**.
 
 ## 📄 Lisensi
 
-Proyek ini berada di bawah Lisensi MIT. Lihat file [LICENSE](LICENSE.md) untuk detail lebih lanjut.
+Proyek ini berada di bawah Lisensi MIT. Lihat file [MIT License](https://opensource.org/licenses/MIT) untuk detail lebih lanjut.
