@@ -44,5 +44,14 @@
                 </x-button>
             </div>
         </form>
+
+        @if (Route::has('register'))
+            <div class="text-center mt-4 text-sm text-gray-600">
+                Don't have an account?
+                <a class="underline hover:text-gray-900" href="{{ route('register') }}">
+                    Register here
+                </a>
+            </div>
+        @endif
     </x-authentication-card>
 </x-guest-layout>

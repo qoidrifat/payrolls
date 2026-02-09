@@ -1,0 +1,140 @@
+/* Mengimpor gaya dasar Filament dan file konfigurasi Tailwind */
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+@config './tailwind.config.js';
+
+/*
+============================================
+  GLOBAL THEME OVERRIDE: SECURE GATEWAY THEME
+============================================
+*/
+
+:root {
+    --bg-dark: #0f172a;
+    --panel-bg: #1e293b;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --accent-cyan: #06b6d4;
+    --accent-purple: #a855f7;
+    --text-bright: #f8fafc;
+    --text-dim: #94a3b8;
+    --danger: #e11d48;
+    --success: #22c55e;
+    --warning: #f59e0b;
+
+    /* Override warna default Filament untuk panel KARYAWAN */
+    --primary: var(--accent-purple);
+    --primary-hover: #9333ea;
+    --primary-color: var(--primary);
+
+    /* Variable warna dasar Filament */
+    --app-background: var(--bg-dark);
+    --body-background: var(--bg-dark);
+    --panel-background: var(--panel-bg);
+    --sidebar-background: var(--bg-dark);
+    --card-background: var(--panel-bg);
+    --table-header-background: var(--panel-bg);
+    --table-background: var(--panel-bg);
+    --table-row-background-hover: #334155;
+}
+
+body {
+    background-color: var(--body-background);
+    color: var(--text-dim);
+}
+
+/* ================================== */
+/*         HALAMAN LOGIN KUSTOM       */
+/* ================================== */
+body.fi-auth-login {
+    background: var(--bg-dark) radial-gradient(circle at top right, #3b0764, #0f172a 40%),
+                radial-gradient(circle at bottom left, #1e3a8a, #0f172a 40%);
+    background-attachment: fixed;
+}
+
+.fi-auth-card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 1.5rem !important; /* 24px */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Logo di halaman login (dibuat putih agar kontras) */
+.fi-auth-card .fi-logo {
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
+/* Judul "Sign in" */
+.fi-auth-card-header h2.fi-simple-header-heading {
+    color: var(--text-bright) !important;
+    font-size: 1.75rem !important;
+    font-weight: 700 !important;
+}
+
+/* Label form (Email, Password) */
+.fi-form .fi-label {
+    color: var(--text-dim) !important;
+    font-weight: 400 !important;
+}
+
+/* Input fields */
+.fi-auth-card .fi-input-wrapper .fi-input {
+    background-color: rgba(0,0,0,0.25) !important;
+    border-color: var(--glass-border) !important;
+    color: var(--text-bright) !important;
+}
+.fi-auth-card .fi-input-wrapper:focus-within {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 30%, transparent) !important;
+}
+
+/* Tombol Login */
+.fi-auth-card .fi-btn-primary {
+    background-color: var(--primary) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    border-radius: 0.75rem !important;
+}
+.fi-auth-card .fi-btn-primary:hover {
+     background-color: var(--primary-hover) !important;
+}
+
+/* Checkbox "Remember me" */
+.fi-checkbox-label {
+    color: var(--text-dim) !important;
+}
+.fi-checkbox .fi-input-wrapper {
+    border-color: var(--glass-border) !important;
+}
+
+
+/* ================================== */
+/*     GAYA UMUM PANEL (SETELAH LOGIN)  */
+/* ================================== */
+.fi-topbar, .fi-sidebar {
+    background-color: var(--sidebar-background) !important;
+    border-color: var(--glass-border) !important;
+}
+.fi-topbar { border-bottom: 1px solid var(--glass-border); }
+.fi-sidebar { border-right: 1px solid var(--glass-border); }
+h1, h2, h3, strong, .fi-logo { color: var(--text-bright); }
+
+.fi-section, .fi-modal-content, .fi-ta-content, .fi-wi-widget {
+    background-color: var(--panel-background) !important;
+    border-radius: 1rem !important;
+    border: 1px solid var(--glass-border) !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+}
+
+.fi-ta-header { background-color: transparent !important; }
+
+.fi-input-wrapper .fi-input {
+    background-color: #0f172a !important;
+    color: var(--text-bright) !important;
+    border-color: var(--glass-border) !important;
+}
+.fi-input-wrapper:focus-within {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 30%, transparent) !important;
+}

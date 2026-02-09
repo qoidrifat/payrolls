@@ -27,6 +27,7 @@ class KaryawanPanelProvider extends PanelProvider
             ->id('karyawan')
             ->path('karyawan')
             ->login()
+            ->viteTheme('resources/css/filament/karyawan/theme.css')
             ->colors([
                 'primary' => Color::Amber,
             ])
